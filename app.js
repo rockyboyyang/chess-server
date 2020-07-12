@@ -63,12 +63,15 @@ const updateGameBoard = (gameBoard) => {
   match.squareValues = gameBoard.gameBoard;
   const newTurn = gameBoard.turn
   const gameboard= match.squareValues
+  const currentStatus = gameBoard.gameStatus
   // console.log(match)
+  console.log(gameBoard)
   // console.log('match object', match.squareValues)
   const message = JSON.stringify({
     type: 'update-board',
     data: { gameboard },
     newTurn,
+    currentStatus,
   });
   match.playerOne.ws.send(message)
   match.playerTwo.ws.send(message)
