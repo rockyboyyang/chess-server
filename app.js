@@ -32,7 +32,7 @@ const broadcastMessage = (type, data, players) => {
     player.ws.send(message, (err) => {
       if(err) {
         // TODO Handle errors.
-        console.log(err);
+        // console.log(err);
       }
     })
   })
@@ -65,7 +65,7 @@ const updateGameBoard = (gameBoard) => {
   const gameboard= match.squareValues
   const currentStatus = gameBoard.gameStatus
   // console.log(match)
-  console.log(gameBoard)
+  // console.log(gameBoard)
   // console.log('match object', match.squareValues)
   const message = JSON.stringify({
     type: 'update-board',
